@@ -1,3 +1,5 @@
+![Screenshot](shot.jpg)
+
 # Directory
 A simple app for http://iosdevdirectory.com
 
