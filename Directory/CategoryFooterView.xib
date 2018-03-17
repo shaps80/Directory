@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fWi-T3-Avt" customClass="UITableViewHeaderFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVj-Ev-OMZ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
+                    <color key="backgroundColor" red="1" green="0.58218519410000003" blue="0.33739183010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="CCp-wm-Vsv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CVj-Ev-OMZ" secondAttribute="bottom" id="4Cf-wn-b8f"/>
+                <constraint firstItem="CVj-Ev-OMZ" firstAttribute="leading" secondItem="fWi-T3-Avt" secondAttribute="leading" id="LpN-ii-l6D"/>
+                <constraint firstAttribute="trailing" secondItem="CVj-Ev-OMZ" secondAttribute="trailing" id="xx2-3Q-d4a"/>
+                <constraint firstItem="CVj-Ev-OMZ" firstAttribute="top" secondItem="fWi-T3-Avt" secondAttribute="top" id="y7d-KK-Pye"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-93.5" y="-136.5"/>
+        </view>
+    </objects>
+</document>
