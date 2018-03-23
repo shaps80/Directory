@@ -6,7 +6,10 @@ target 'Directory' do
   use_frameworks!
   inhibit_all_warnings!
 
-  # Pods for Directory
-  pod 'Peek', :path => '../Peek', :configurations => ['Debug']
+  # DEBUG
+  pod 'Peek', :configurations => ['Debug']
+  
+  # DEBUG/RELEASE
+  pod 'Kingfisher'
 
 end

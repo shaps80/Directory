@@ -27,7 +27,7 @@ public struct Environment {
 extension Environment {
     
     /// Returns a convenient default instance that points to `master`.
-    public static let master = Environment(url: URL(string: "https://raw.githubusercontent.com/daveverwer/iOSDevDirectory/master/sites.json")!)
+    public static let master = Environment(url: URL(string: "https://raw.githubusercontent.com/daveverwer/iOSDevDirectory/master/content.json")!)
     
 }
 

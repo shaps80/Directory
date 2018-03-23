@@ -47,6 +47,19 @@ public struct Category: Codable {
     
 }
 
+extension Category {
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        title = try container.decode(String.self, forKey: .title)
+        slug = try container.decode(String.self, forKey: .slug)
+        summary = try container.decode(String.self, forKey: .summary)
+        sites = try container.decode([Site].self, forKey: .sites)
+    }
+    
+}
+
 extension Category: Comparable {
     
     public static func <(lhs: Category, rhs: Category) -> Bool {

@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 final class ImageView: UIImageView {
     
     override func prepareForInterfaceBuilder() {

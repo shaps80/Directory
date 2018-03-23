@@ -21,6 +21,11 @@ import Foundation
  */
 public struct Site: Codable {
     
+    public enum Kind {
+        case blog
+        case podcast
+    }
+    
     public enum CodingKeys: String, CodingKey {
         case title = "title"
         case author = "author"
@@ -34,6 +39,30 @@ public struct Site: Codable {
     public let siteUrl: URL
     public let feedUrl: URL?
     public let twitterUrl: URL?
+    
+}
+
+extension Site {
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        title = try container.decode(String.self, forKey: .title)
+        author = try container.decode(String.self, forKey: .author)
+        siteUrl = try container.decode(URL.self, forKey: .siteUrl)
+        feedUrl = try container.decodeIfPresent(URL.self, forKey: .feedUrl)
+        twitterUrl = try container.decodeIfPresent(URL.self, forKey: .twitterUrl)
+    }
+    
+}
+
+extension Site {
+    
+    /// Returns a Url to fetch the profile photo of the associated Twitter user. When nil, a placeholder image will be used instead.
+    public var avatarUrl: URL? {
+        guard let username = twitterUrl?.lastPathComponent else { return nil }
+        return URL(string: "https://avatars.io/twitter/\(username)")
+    }
     
 }
 

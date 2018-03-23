@@ -45,7 +45,7 @@ public final class FetchRequest {
             
             // if we got anything other than 200 for the response, complete with failure
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                completion(.failure(Error.unknown(data, response), environment))
+                complete(with: .failure(Error.unknown(data, response), environment))
                 return
             }
             
@@ -57,7 +57,8 @@ public final class FetchRequest {
             
             do {
                 let decoder = JSONDecoder()
-                let categories = try decoder.decode([Category].self, from: jsonData)
+                let regions = try decoder.decode([Region].self, from: jsonData)
+                let categories = regions.flatMap { $0.categories }
                 complete(with: .success(categories))
             } catch {
                 // if JSON parsing failed, complete with failure

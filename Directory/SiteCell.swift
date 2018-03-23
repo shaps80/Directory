@@ -23,11 +23,16 @@ internal final class SiteCell: UITableViewCell {
         selectedBackgroundView = view
     }
     
-    internal func prepare(with site: Site) {
+    internal func prepare(with site: Site, kind: Site.Kind) {
         titleLabel.text = site.title
         authorLabel.text = site.author
         feedImageView.isHidden = site.feedUrl == nil
         twitterImageView.isHidden = site.twitterUrl == nil
+        
+        switch kind {
+        case .podcast: feedImageView.image = #imageLiteral(resourceName: "podcast")
+        case .blog: feedImageView.image = #imageLiteral(resourceName: "feed")
+        }
     }
     
     override func prepareForReuse() {
@@ -37,6 +42,7 @@ internal final class SiteCell: UITableViewCell {
         authorLabel.text = nil
         twitterImageView.isHidden = true
         feedImageView.isHidden = true
+        feedImageView.image = nil
     }
     
 }

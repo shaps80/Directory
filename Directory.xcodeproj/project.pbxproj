@@ -21,6 +21,7 @@
 		5487B9C2205C42FC0055481C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487B9C1205C42FC0055481C /* NavigationController.swift */; };
 		5487B9C4205C47840055481C /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487B9C3205C47840055481C /* StoryboardLoadable.swift */; };
 		5487B9C7205C50C40055481C /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487B9C6205C50C40055481C /* SiteCell.swift */; };
+		54C46F252060294100B2B001 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C46F242060294100B2B001 /* Region.swift */; };
 		54CD010D205C82510014417B /* CategoryFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CD010C205C82510014417B /* CategoryFooterView.xib */; };
 		54CD010F205C8E660014417B /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD010E205C8E660014417B /* Button.swift */; };
 		54F7A262205C25E300BC7531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7A261205C25E300BC7531 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		5487B9C1205C42FC0055481C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		5487B9C3205C47840055481C /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
 		5487B9C6205C50C40055481C /* SiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
+		54C46F242060294100B2B001 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		54CD010C205C82510014417B /* CategoryFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryFooterView.xib; sourceTree = "<group>"; };
 		54CD010E205C8E660014417B /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		54F7A25E205C25E300BC7531 /* Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Directory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				545190AA205C2DA7009C9F7C /* Environment.swift */,
+				54C46F242060294100B2B001 /* Region.swift */,
 				545190A6205C2C0E009C9F7C /* Category.swift */,
 				545190A8205C2C14009C9F7C /* Site.swift */,
 			);
@@ -253,11 +256,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Directory/Pods-Directory-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GraphicsRenderer/GraphicsRenderer.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Peek/Peek.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GraphicsRenderer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Peek.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				545854D2205C79B700003635 /* CategoryHeaderView.swift in Sources */,
+				54C46F252060294100B2B001 /* Region.swift in Sources */,
 				54609FF1205C61C3000169BE /* ImageView.swift in Sources */,
 				54F7A266205C25E400BC7531 /* SiteViewController.swift in Sources */,
 				54CD010F205C8E660014417B /* Button.swift in Sources */,

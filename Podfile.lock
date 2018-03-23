@@ -1,19 +1,18 @@
 PODS:
   - GraphicsRenderer (1.2.0)
+  - Kingfisher (4.6.3)
   - Peek (5.0.0):
     - GraphicsRenderer (= 1.2.0)
 
 DEPENDENCIES:
-  - Peek (from `../Peek`)
-
-EXTERNAL SOURCES:
-  Peek:
-    :path: ../Peek
+  - Kingfisher
+  - Peek
 
 SPEC CHECKSUMS:
   GraphicsRenderer: fec3014926360221359205a64060414273d625e5
-  Peek: 64ec5f288fa623b7a0bf645d1c9c6191ffe9e4d9
+  Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
+  Peek: 56d064f87b43a8db22cabcc0e3904c4488b7e31a
 
-PODFILE CHECKSUM: dd2cd6c8a835b62de1ee045355dc82dcef9a7720
+PODFILE CHECKSUM: 04470d5e51b1b41d160c2a2763bb56923aaa433d
 
 COCOAPODS: 1.4.0
