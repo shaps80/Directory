@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 internal final class SiteCell: UITableViewCell {
     
@@ -14,6 +15,7 @@ internal final class SiteCell: UITableViewCell {
     @IBOutlet private weak var authorLabel: UILabel!
     @IBOutlet private weak var twitterImageView: UIImageView!
     @IBOutlet private weak var feedImageView: UIImageView!
+    @IBOutlet private weak var profileImageView: ImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,11 +30,18 @@ internal final class SiteCell: UITableViewCell {
         authorLabel.text = site.author
         feedImageView.isHidden = site.feedUrl == nil
         twitterImageView.isHidden = site.twitterUrl == nil
-        
+
         switch kind {
         case .podcast: feedImageView.image = #imageLiteral(resourceName: "podcast")
         case .blog: feedImageView.image = #imageLiteral(resourceName: "feed")
         }
+
+        let processor = RoundCornerImageProcessor(cornerRadius: profileImageView.bounds.size.width/2,
+                                                  targetSize: profileImageView.frame.size)
+        let placeholderImage = UIImage(named: "profile")?.withRenderingMode(.alwaysTemplate)
+        profileImageView.kf.setImage(with: site.avatarUrl,
+                                     placeholder: placeholderImage,
+                                     options: [.processor(processor), .scaleFactor(UIScreen.main.scale)])
     }
     
     override func prepareForReuse() {
@@ -43,6 +52,7 @@ internal final class SiteCell: UITableViewCell {
         twitterImageView.isHidden = true
         feedImageView.isHidden = true
         feedImageView.image = nil
+        profileImageView.image = nil
     }
     
 }

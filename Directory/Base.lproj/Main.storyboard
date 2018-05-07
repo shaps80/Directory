@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RMx-3f-FxP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RMx-3f-FxP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -212,6 +212,7 @@
                                 <connections>
                                     <outlet property="authorLabel" destination="XeL-kN-fMI" id="8TU-np-Kit"/>
                                     <outlet property="feedImageView" destination="cUi-EP-nuW" id="LSw-nF-afh"/>
+                                    <outlet property="profileImageView" destination="k0s-0y-H6v" id="0kM-DW-eXf"/>
                                     <outlet property="titleLabel" destination="FTQ-p6-65l" id="ok9-Ta-iWK"/>
                                     <outlet property="twitterImageView" destination="fv0-5R-ljB" id="2kT-KH-KqP"/>
                                     <segue destination="JEX-9P-axG" kind="show" identifier="showDetail" id="3qx-E6-FUj">
@@ -229,6 +230,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Directory" id="Zdf-7t-Un8"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="FyF-Bv-cBl">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <action selector="performFetch" destination="7bK-jq-Zjz" eventType="valueChanged" id="HnG-Z7-4HH"/>
