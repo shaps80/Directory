@@ -136,7 +136,7 @@ extension DirectoryViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         let searchText = (searchController.searchBar.text ?? "").trimmingCharacters(in: .whitespaces)
-        filteredCategories = categories.flatMap {
+        filteredCategories = categories.compactMap {
             let sites = $0.sites.filter {
                 $0.title.localizedCaseInsensitiveContains(searchText)
                     || $0.author.localizedCaseInsensitiveContains(searchText)
