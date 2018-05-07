@@ -44,6 +44,10 @@ internal final class SiteCell: UITableViewCell {
                                      options: [.processor(processor), .scaleFactor(UIScreen.main.scale)])
     }
     
+    internal func cancelDownloadAvatarImageTask() {
+        profileImageView.kf.cancelDownloadTask()
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         

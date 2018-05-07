@@ -191,6 +191,11 @@ extension DirectoryViewController {
         navigationController?.pushViewController(controller, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // Cancel all unfinished downloading task when the cell disappearing.
+        (cell as? SiteCell)?.cancelDownloadAvatarImageTask()
+    }
+    
 }
 
 // MARK: Navigation
